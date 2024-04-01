@@ -3,9 +3,11 @@ import requests
 import os
 import json
 
-config_file_path = 'C:\NOAA_Scripts\urls.json'
-with open(config_file_path, 'r') as json_file:
+config_file_path = r"C:\NOAA_Scripts\urls.json"
+with open(config_file_path, 'r', encoding='utf=8') as json_file:
     config_data = json.load(json_file)
+
+print(config_data)
 
 image_urls = config_data['image_urls']
 tracklog_urls = config_data['tracklog_urls']
